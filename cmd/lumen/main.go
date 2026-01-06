@@ -1,6 +1,13 @@
 package main
 
-// TODO: Parse CLI flags and commands
-// TODO: Load configuration from lumen.config.js or defaults
-// TODO: Initialize and start the dev server
-// TODO: Handle graceful shutdown
+import (
+	"log"
+
+	"github.com/rohits-web03/lumen/internal/server"
+)
+
+func main() {
+	if err := server.Start(); err != nil {
+		log.Fatal(err)
+	}
+}
